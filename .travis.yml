@@ -1,0 +1,18 @@
+language: php
+
+php: [5.4, 5.5]
+
+before_script:
+  - sudo apt-get install python-setuptools
+  - sudo easy_install pip
+  - sudo pip install setuptools --no-use-wheel --upgrade
+  - sudo pip install docutils
+  - composer install --dev --prefer-source
+  - export PATH=./vendor/bin:$PATH
+
+script:
+  - phpspec run -fdot
+
+notifications:
+  email:
+    - benjamin.grandfond@gmail.com

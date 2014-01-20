@@ -1,0 +1,28 @@
+{
+    "name": "benjam1/php-markup",
+    "version": "1.0.0",
+    "description": "PHP library that renders markups",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benjamin Grandfond",
+            "email": "benjamin.grandfond@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/process": "2.5",
+        "michelf/php-markdown": "1.4.*@dev"
+
+    },
+    "require-dev": {
+        "phpspec/phpspec": "2.0.*@dev"
+    },
+    "autoload": {
+        "psr-4": { "BenjaM1\\": "src/BenjaM1" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
