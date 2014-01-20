@@ -1,4 +1,4 @@
-# PHP Markup
+# PHP Markup [![Build Status](https://travis-ci.org/benja-M-1/php-markup.png?branch=master)](https://travis-ci.org/benja-M-1/php-markup)
 
 PHP Markup renders files written with a markup language.
 
