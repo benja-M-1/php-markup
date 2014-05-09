@@ -3,7 +3,6 @@
 namespace spec\BenjaM1\Markup;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class Rest2HtmlSpec extends ObjectBehavior
 {

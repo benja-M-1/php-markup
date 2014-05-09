@@ -26,7 +26,7 @@ class Rest2Html implements MarkupInterface
      * Check whether the markup support the file format.
      *
      * @param $file
-     * @return mixed
+     * @return boolean
      */
     public function support($file)
     {
