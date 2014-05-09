@@ -5,7 +5,7 @@ namespace BenjaM1\Markup;
 use Symfony\Component\Process\ExecutableFinder;
 use Symfony\Component\Process\Process;
 
-class Rest2Html implements MarkupInterface
+class Rest2Html extends BaseMarkup implements MarkupInterface
 {
     /**
      * Render a markuped file to html
@@ -20,19 +20,6 @@ class Rest2Html implements MarkupInterface
         $process->run();
 
         return $process->getOutput();
-    }
-
-    /**
-     * Check whether the markup support the file format.
-     *
-     * @param $file
-     * @return boolean
-     */
-    public function support($file)
-    {
-        $extension = pathinfo($file, PATHINFO_EXTENSION);
-
-        return (int) preg_match($this->getExtensions(), $extension) > 0;
     }
 
     /**

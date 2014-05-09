@@ -4,7 +4,7 @@ namespace BenjaM1\Markup;
 
 use Michelf\MarkdownExtra;
 
-class Markdown implements MarkupInterface
+class Markdown extends BaseMarkup implements MarkupInterface
 {
     /**
      * Render a markuped file to html
@@ -15,19 +15,6 @@ class Markdown implements MarkupInterface
     public function render($file)
     {
         return MarkdownExtra::defaultTransform(file_get_contents($file));
-    }
-
-    /**
-     * Check whether the markup support the file format.
-     *
-     * @param $file
-     * @return boolean
-     */
-    public function support($file)
-    {
-        $extension = pathinfo($file, PATHINFO_EXTENSION);
-
-        return (int) preg_match($this->getExtensions(), $extension) > 0;
     }
 
     /**
